@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan Signage Akrilik</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      padding: 16px;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 520px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deskripsi {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #d35400;
+      background: #fff6e5;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .note b {
+      display: block;
+      font-size: 16px;
+      color: #c0392b;
+      margin-bottom: 6px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <h2>Pesan "Signage Akrilik"</h2>
+      <div class="deskripsi">
+        Signage akrilik merupakan suatu tanda yang terbuat dari akrilik dan dipasang di suatu tempat yang bertujuan untuk menghadirkan informasi singkat dapat berupa pemberitahuan, peringatan, posisi, tempat dan lain sebagainya. Bentuk dan desain dapat dikustomisasi dengan sesuai kreatifitas Anda.
+      </div>
+
+      <label>Nama Anda</label>
+      <input type="text" id="nama" required>
+
+      <label>Nomor WhatsApp Anda</label>
+      <input type="tel" id="nowa" pattern="[0-9]+" required>
+
+      <label>Bahan</label>
+      <select id="bahan">
+        <option value="Akrilik Putih 2mm">Akrilik Putih 2mm</option>
+        <option value="Akrilik Putih 3mm">Akrilik Putih 3mm</option>
+        <option value="Akrilik Hitam 2mm">Akrilik Hitam 2mm</option>
+        <option value="Akrilik Hitam 3mm">Akrilik Hitam 3mm</option>
+        <option value="Akrilik Bening 2mm">Akrilik Bening 2mm</option>
+        <option value="Akrilik Bening 3mm">Akrilik Bening 3mm</option>
+      </select>
+
+      <label>Jenis Signage</label>
+      <select id="jenis">
+        <option value="Tempel">Tempel</option>
+        <option value="Gantung">Gantung</option>
+      </select>
+
+      <label>Metode Print</label>
+      <select id="metode">
+        <option value="UV Print">UV Print</option>
+      </select>
+
+      <label>Sisi Cetakan</label>
+      <select id="sisi">
+        <option value="1 Sisi (Depan Saja)">1 Sisi (Depan Saja)</option>
+        <option value="2 Sisi (Depan-Belakang)">2 Sisi (Depan-Belakang)</option>
+      </select>
+
+      <label>Ukuran</label>
+      <select id="ukuran">
+        <option value="10x10 cm">10x10 cm</option>
+        <option value="20x10 cm">20x10 cm</option>
+        <option value="20x20 cm">20x20 cm</option>
+        <option value="30x10 cm">30x10 cm</option>
+        <option value="30x20 cm">30x20 cm</option>
+        <option value="40x20 cm">40x20 cm</option>
+      </select>
+
+      <label>Jumlah</label>
+      <input type="number" id="jumlah" required>
+
+      <label>Kapan Dibutuhkan?</label>
+      <input type="date" id="tanggal" required>
+
+      <label>Pada Jam Berapa?</label>
+      <input type="time" id="jam" required>
+
+      <label>Catatan Khusus untuk Admin Kami</label>
+      <textarea id="catatan" rows="4"></textarea>
+
+      <div class="note">
+        <b>Penting !</b>
+        Estimasi Dateline Yang Anda Atur Bisa Berubah Sesuai Kondisi Antrian, Anda Bisa Atur Negosiasi Waktu Dateline Dengan Admin Kami. <b>"Pastikan File Anda Ready / Siap Print"</b>
+      </div>
+
+      <button type="submit">Cek Harga ke Admin Metropolis Print</button>
+    </form>
+  </div>
+</body>
+</html>
